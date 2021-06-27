@@ -17,13 +17,20 @@ public class UsoEmpleados {
 
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
 
-        //Pedir al contexto el bean
+        /*//Pedir al contexto el bean
 
         Empleados Juan = context.getBean("miEmpleado", Empleados.class);
 
         //Utilizar el objeto
         System.out.println(Juan.getTareas());
-        System.out.println(Juan.getInforme());
+        System.out.println(Juan.getInforme());*/
+
+        //Pedir al contexto el bean
+
+        Empleados Maria = context.getBean("miSecretarioEmpleado", Empleados.class);
+        //Utilizar el objeto
+        System.out.println(Maria.getTareas());
+        System.out.println(Maria.getInforme());
 
         //cerramos el xml
         context.close();
